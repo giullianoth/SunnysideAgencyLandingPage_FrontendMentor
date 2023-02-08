@@ -1,0 +1,53 @@
+// **************
+// *   LAYOUT   *
+// **************
+$layout-mobile:   375px;
+$layout-desktop: 1440px;
+
+// **************
+// *   COLORS   *
+// **************
+// Primary:
+$color-soft-red:                    hsl(7, 99%, 70%);
+$color-yellow:                    hsl(51, 100%, 49%);
+$color-dark-desatured-cyan-text:  hsl(167, 40%, 24%);
+$color-dark-blue-text:            hsl(198, 62%, 26%);
+$color-dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+
+// Neutral:
+$color-very-dark-desatured-blue: hsl(212, 27%, 19%);
+$color-very-dark-grayish-blue:    hsl(213, 9%, 39%);
+$color-dark-grayish-blue:        hsl(232, 10%, 55%);
+$color-grayish-blue:              hsl(210, 4%, 67%);
+$color-white:                      hsl(0, 0%, 100%);
+
+// ******************
+// *   TIPOGRAPHY   *
+// ******************
+// Body Copy:
+$font-size-default: 18px;
+
+// Font:
+$font-barlow: 'Barlow', sans-serif;
+$font-fraunces:  'Fraunces', serif;
+
+// Font presets:
+$font-path: "../../fonts";
+
+$font-barlow-presets: (
+    weights: (600),
+    family: $font-barlow,
+    files: ("Barlow-SemiBold.ttf"),    
+    path: ("Barlow"),
+    format: ("truetype")
+);
+
+$font-fraunces-presets: (
+    weights: (700, 900),
+    family: $font-fraunces,
+    files: ("Fraunces_9pt-Bold.ttf", "Fraunces_9pt-Black.ttf"),
+    path: ("Fraunces/static/Fraunces_9pt"),
+    format: ("truetype")
+);
+
+$fonts: $font-barlow-presets, $font-fraunces-presets;
