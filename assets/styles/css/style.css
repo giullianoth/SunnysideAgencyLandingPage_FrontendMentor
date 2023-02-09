@@ -297,3 +297,13 @@ body h1, body h2 {
   font-size: 0.8em;
   color: hsl(210deg, 4%, 67%);
 }
+
+.main_gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main_gallery_item {
+  flex-basis: 50%;
+}

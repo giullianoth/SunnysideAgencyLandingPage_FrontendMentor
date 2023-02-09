@@ -1,16 +1,17 @@
 // SASS Variables
-@import "variables";
-@import "mixins";
+@import    "variables";
+@import       "mixins";
 
 // Fonts Preset
-@import "fonts";
+@import        "fonts";
 
 // Boot Config
-@import "boot";
+@import         "boot";
 
 // Theme Config
-@import "header";
-@import "headline";
+@import       "header";
+@import     "headline";
 @import "presentation";
-@import "services";
+@import     "services";
 @import "testimonials";
+@import      "gallery";

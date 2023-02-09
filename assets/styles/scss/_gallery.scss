@@ -1,0 +1,7 @@
+.main_gallery {
+    @include flex;
+
+    &_item {
+        @include flex2;
+    }
+}
