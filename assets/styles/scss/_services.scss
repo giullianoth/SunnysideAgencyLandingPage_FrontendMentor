@@ -1,0 +1,54 @@
+.main_services {
+    @include flex;
+
+    &_service {
+        @include flex1;
+        position: relative;
+
+        &_info {
+            @include absoluteFull(unset);
+            bottom: 0;
+            padding: {
+                top: 0;
+                right: 20px;
+                bottom: 60px;
+                left: 20px;
+            }
+
+            text-align: center;
+
+            &_title {
+                margin-bottom: 30px;
+
+                h1 {
+                    font-size: 1.6em;
+                }
+
+                &.service1_info_title {
+                    h1 {
+                        color: $color-dark-desatured-cyan-text;
+                    }
+                }
+
+                &.service2_info_title {
+                    h1 {
+                        color: $color-dark-blue-text;
+                    }
+                }
+            }
+
+            &_text {
+                font-size: 0.9em;
+                line-height: 1.6em;
+
+                &.service1_info_text {
+                    color: $color-dark-desatured-cyan-text;
+                }
+
+                &.service2_info_text {
+                    color: $color-dark-blue-text;
+                }
+            }
+        }
+    }
+}

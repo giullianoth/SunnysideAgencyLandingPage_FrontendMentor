@@ -203,3 +203,48 @@ body h1, body h2 {
   color: hsl(212deg, 27%, 19%);
   position: relative;
 }
+
+.main_services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main_services_service {
+  flex-basis: 100%;
+  position: relative;
+}
+.main_services_service_info {
+  position: absolute;
+  top: unset;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  text-align: center;
+}
+.main_services_service_info_title {
+  margin-bottom: 30px;
+}
+.main_services_service_info_title h1 {
+  font-size: 1.6em;
+}
+.main_services_service_info_title.service1_info_title h1 {
+  color: hsl(167deg, 40%, 24%);
+}
+.main_services_service_info_title.service2_info_title h1 {
+  color: hsl(198deg, 62%, 26%);
+}
+.main_services_service_info_text {
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+.main_services_service_info_text.service1_info_text {
+  color: hsl(167deg, 40%, 24%);
+}
+.main_services_service_info_text.service2_info_text {
+  color: hsl(198deg, 62%, 26%);
+}
