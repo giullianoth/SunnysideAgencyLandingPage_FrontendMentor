@@ -64,6 +64,14 @@
     @include setBrowserCores(box-sizing, $value);
 }
 
+@mixin borderRadius($radius) {
+    @include setBrowserCores(border-radius, $radius);
+}
+
+@mixin rounded() {
+    @include borderRadius(50%);
+}
+
 // FLEXBOX
 @mixin flex($justifyContent: center, $alignItems: center, $flexWrap: wrap) {
     display: flex;
@@ -96,4 +104,21 @@
 
 @mixin flex4($gap: 0) {
     @include flexBasis(25%, $gap);
+}
+
+// POSITION ABSOLUTE
+@mixin absolute($top: 0, $left: 0) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absoluteFull($top: 0, $left: 0) {
+    @include absolute($top, $left);
+    width: 100%;
+}
+
+// TRANSITION
+@mixin transition($property: all, $duration: 0.3s, $timing-function: ease, $delay: 0s) {
+    transition: $property $duration $timing-function $delay;
 }
