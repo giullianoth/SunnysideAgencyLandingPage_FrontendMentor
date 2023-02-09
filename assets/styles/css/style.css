@@ -17,6 +17,7 @@
 * {
   margin: 0;
   padding: 0;
+  outline: none;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -26,6 +27,7 @@ body {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
   color: hsl(213deg, 9%, 39%);
+  position: relative;
 }
 body a {
   text-decoration: none;
@@ -306,4 +308,59 @@ body h1, body h2 {
 }
 .main_gallery_item {
   flex-basis: 50%;
+}
+
+.main_footer {
+  background-color: hsl(167deg, 44%, 70%);
+  text-align: center;
+  padding: 60px 20px;
+}
+.main_footer_title {
+  margin-bottom: 30px;
+}
+.main_footer_menu {
+  margin-bottom: 60px;
+}
+.main_footer_menu_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main_footer_menu_list_item {
+  list-style: none;
+}
+.main_footer_menu_list_item a {
+  color: hsl(168deg, 34%, 41%);
+}
+.main_footer_social_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: 1.1em;
+}
+.main_footer_social_list_item {
+  list-style: none;
+}
+.main_footer_social_list_item a {
+  color: hsl(168deg, 34%, 41%);
+}
+.main_footer_attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(232deg, 10%, 55%);
+  position: absolute;
+  top: unset;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  padding: 8px 0;
+}
+.main_footer_attribution a {
+  color: hsl(167deg, 40%, 24%);
+}
+.main_footer_attribution a:hover {
+  text-decoration: underline;
 }

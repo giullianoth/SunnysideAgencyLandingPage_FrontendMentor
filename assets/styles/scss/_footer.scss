@@ -1,0 +1,60 @@
+.main_footer {
+    background-color: $color-dark-moderate-cyan-footer-background;
+    text-align: center;
+    padding: 60px 20px;
+
+    &_title {
+        margin-bottom: 30px;
+    }
+
+    &_menu {
+        margin-bottom: 60px;
+
+        &_list {
+            @include flex(space-around);
+
+            &_item {
+                list-style: none;
+
+                a {
+                    color: $color-dark-moderate-cyan-footer;
+                }
+            }
+        }
+    }
+
+    &_social {
+        &_list {
+            @include flex;
+            gap: 30px;
+            font-size: 1.1em;
+
+            &_item {
+                list-style: none;
+
+                a {
+                    color: $color-dark-moderate-cyan-footer;
+                }
+            }
+        }
+    }
+
+    &_attribution {
+        font-size: 11px;
+        text-align: center;
+        color: $color-dark-grayish-blue;
+
+        @include absoluteFull(unset);
+        bottom: 0;
+
+        padding: 8px 0;
+
+        a {
+            color: $color-dark-desatured-cyan-text;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

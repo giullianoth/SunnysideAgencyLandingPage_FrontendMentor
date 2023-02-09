@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    outline: none;
 
     @include boxSizing;
 }
@@ -9,6 +10,7 @@ body {
     font-family: $font-barlow;
     font-size: $font-size-default;
     color: $color-very-dark-grayish-blue;
+    position: relative;
 
     a {
         text-decoration: none;
