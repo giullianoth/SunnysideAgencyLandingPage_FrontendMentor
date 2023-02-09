@@ -269,7 +269,7 @@ body h1, body h2 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 70px;
 }
 .main_testimonials_content_testimonial {
   flex-basis: 100%;
