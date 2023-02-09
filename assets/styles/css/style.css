@@ -143,3 +143,63 @@ body h1, body h2 {
 .main_headline_content_arrowimage {
   width: 10%;
 }
+
+.main_presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main_presentation_image {
+  flex-basis: 100%;
+}
+.main_presentation_info {
+  flex-basis: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  color: hsl(232deg, 10%, 55%);
+}
+.main_presentation_info_title {
+  width: 90%;
+  margin-bottom: 20px;
+}
+.main_presentation_info_title h1 {
+  font-size: 1.6em;
+}
+.main_presentation_info_text {
+  line-height: 1.6em;
+  margin-bottom: 30px;
+}
+.main_presentation_info_cta {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  position: relative;
+  padding: 0 8px;
+}
+.main_presentation_info_cta::before {
+  content: "";
+  position: absolute;
+  top: unset;
+  left: 0;
+  width: 100%;
+  bottom: -1px;
+  height: 8px;
+  opacity: 0.3;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.main_presentation_info_cta.presentation1_info_cta::before {
+  background-color: hsl(51deg, 100%, 49%);
+}
+.main_presentation_info_cta.presentation2_info_cta::before {
+  background-color: hsl(7deg, 99%, 70%);
+}
+.main_presentation_info_cta a {
+  color: hsl(212deg, 27%, 19%);
+  position: relative;
+}

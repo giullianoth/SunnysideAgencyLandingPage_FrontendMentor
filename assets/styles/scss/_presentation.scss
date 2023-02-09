@@ -1,0 +1,67 @@
+.main_presentation {
+    @include flex;
+
+    &_image {
+        @include flex1;
+    }
+
+    &_info {
+        @include flex1;
+        padding: 60px 20px;
+        text-align: center;
+        color: $color-dark-grayish-blue;
+
+        &_title {
+            width: 90%;
+            margin-bottom: 20px;
+
+            h1 {
+                font-size: 1.6em;
+            }
+        }
+
+        &_text {
+            line-height: 1.6em;
+            margin-bottom: 30px;
+        }
+
+        &_cta {
+            font-family: $font-fraunces;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.875em;
+            letter-spacing: 0.05em;
+
+            display: inline-block;
+            position: relative;
+            padding: 0 8px;
+
+            &::before {
+                content: "";
+                @include absoluteFull(unset);
+                bottom: -1px;
+                height: 8px;
+                opacity: 0.3;
+            
+                @include borderRadius(8px);                
+            }
+
+            &.presentation1_info_cta {
+                &::before {
+                    background-color: $color-yellow;
+                }
+            }
+
+            &.presentation2_info_cta {
+                &::before {
+                    background-color: $color-soft-red;
+                }
+            }
+
+            a {
+                color: $color-very-dark-desatured-blue;
+                position: relative;
+            }
+        }
+    }
+}
