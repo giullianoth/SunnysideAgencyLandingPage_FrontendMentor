@@ -12,6 +12,7 @@ body {
 
     a {
         text-decoration: none;
+        @include transition;
     }
 
     img {
@@ -22,5 +23,6 @@ body {
     h1, h2 {
         font-family: $font-fraunces;
         color: $color-very-dark-desatured-blue;
+        font-weight: 900;
     }
 }
