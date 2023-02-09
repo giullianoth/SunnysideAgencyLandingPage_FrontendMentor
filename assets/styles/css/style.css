@@ -248,3 +248,52 @@ body h1, body h2 {
 .main_services_service_info_text.service2_info_text {
   color: hsl(198deg, 62%, 26%);
 }
+
+.main_testimonials {
+  margin: 60px 0;
+}
+.main_testimonials_title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.main_testimonials_title h1 {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+  color: hsl(210deg, 4%, 67%);
+}
+.main_testimonials_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+.main_testimonials_content_testimonial {
+  flex-basis: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.main_testimonials_content_testimonial_avatar {
+  margin-bottom: 40px;
+}
+.main_testimonials_content_testimonial_avatar img {
+  width: 80px;
+  margin: auto;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.main_testimonials_content_testimonial_text {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  margin-bottom: 40px;
+}
+.main_testimonials_content_testimonial_client h2 {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+.main_testimonials_content_testimonial_client p {
+  font-size: 0.8em;
+  color: hsl(210deg, 4%, 67%);
+}
