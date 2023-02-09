@@ -12,6 +12,10 @@
 
         padding: 0 20px;
 
+        @include setResponsiveDesign(340px, false) {
+            padding: 0 8px;
+        }
+
         &_title {
             font-size: 1.4em;
             text-transform: uppercase;

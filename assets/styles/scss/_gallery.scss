@@ -3,5 +3,9 @@
 
     &_item {
         @include flex2;
+
+        @include setResponsiveDesign(340px, false) {
+            @include flex1;
+        }
     }
 }

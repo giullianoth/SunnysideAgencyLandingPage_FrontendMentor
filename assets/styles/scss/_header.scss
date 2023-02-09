@@ -18,10 +18,14 @@
             font-size: 1.8em;
             color: $color-white;
             cursor: pointer;
+
+            @include setResponsiveDesign(900px) {
+                display: none;
+            }
         }
 
         &_list {
-            @include absolute(calc(100% + 40px), unset);
+            @include absolute(calc(100% + 60px), unset);
             right: 0;
             width: calc(100vw - 40px);
 
@@ -29,19 +33,35 @@
             text-align: center;
             padding: 15px 0;
 
-            display: none;
+            // display: none;
+
+            @include setResponsiveDesign(600px) {
+                width: 400px;
+            }
+
+            @include setResponsiveDesign(900px) {
+                width: auto;
+                position: static;
+                background: none;
+
+                @include flex;
+                gap: 40px;
+                padding: 0;
+            }
 
             &::before {
                 content: "";
-                @include absolute(-20px, unset);
-                right: -20px;
+                @include absolute(-40px, unset);
+                right: 0;
                 width: 0;
                 height: 0;
                 border: 20px solid $color-white;
-                border-bottom-color: transparent;
                 border-top-color: transparent;
-                border-right-color: transparent;
-                transform: rotate(45deg);
+                border-left-color: transparent;
+
+                @include setResponsiveDesign(900px) {
+                    display: none;
+                }
             }
 
             &.active {
@@ -53,8 +73,16 @@
                 margin: 30px 0;
                 font-size: 1.1em;
 
+                @include setResponsiveDesign(900px) {
+                    margin: 0;
+                }
+
                 a {
                     color: $color-dark-grayish-blue;
+                    
+                    @include setResponsiveDesign(900px) {
+                        color: $color-white;
+                    }
                 }
 
                 &_btn {
@@ -69,6 +97,15 @@
                     background-color: $color-yellow;
 
                     @include borderRadius(30px);
+
+                    @include setResponsiveDesign(900px) {
+                        background-color: $color-white;
+                    }
+
+                    &:hover {
+                        background-color: $color-blue-hover;
+                        color: $color-white !important;
+                    }
                 }
             }
         }
