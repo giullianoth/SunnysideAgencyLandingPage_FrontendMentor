@@ -1,8 +1,18 @@
 .main_presentation {
     @include flex;
 
+    &.presentation1 {
+        @include setResponsiveDesign(768px) {
+            flex-direction: row-reverse;
+        }
+    }
+
     &_image {
         @include flex1;
+
+        @include setResponsiveDesign(768px) {
+            @include flex2;
+        }
     }
 
     &_info {
@@ -10,6 +20,17 @@
         padding: 60px 20px;
         text-align: center;
         color: $color-dark-grayish-blue;
+
+        @include setResponsiveDesign(600px) {
+            width: 420px;
+            flex-basis: unset;
+        }
+
+        @include setResponsiveDesign(768px) {
+            @include flex2;
+            padding: 0 30px;
+            text-align: left;
+        }
 
         &_title {
             width: 90%;
@@ -20,6 +41,10 @@
                 left: auto;
             }
 
+            @include setResponsiveDesign(768px) {
+                width: 300px;
+            }
+
             h1 {
                 font-size: 1.6em;
             }
@@ -28,6 +53,16 @@
         &_text {
             line-height: 1.6em;
             margin-bottom: 30px;
+
+            @include setResponsiveDesign(768px) {
+                width: 300px;
+                margin: {
+                    top: 0;
+                    right: auto;
+                    bottom: 30px;
+                    left: auto;
+                }
+            }
         }
 
         &_cta {
@@ -41,31 +76,37 @@
             position: relative;
             padding: 0 8px;
 
-            &::before {
-                content: "";
-                @include absoluteFull(unset);
-                bottom: -1px;
-                height: 8px;
-                opacity: 0.3;
-            
-                @include borderRadius(8px);                
-            }
-
             &.presentation1_info_cta {
-                &::before {
-                    background-color: $color-yellow;
+                a {
+                    &::before {
+                        background-color: $color-yellow;
+                    }
                 }
             }
 
             &.presentation2_info_cta {
-                &::before {
-                    background-color: $color-soft-red;
+                a {
+                    &::before {
+                        background-color: $color-soft-red;
+                    }
                 }
             }
 
             a {
                 color: $color-very-dark-desatured-blue;
                 position: relative;
+                z-index: 2;
+
+                &::before {
+                    content: "";
+                    @include absoluteFull(unset);
+                    bottom: -1px;
+                    height: 8px;
+                    opacity: 0.3;
+                    z-index: 1;
+                
+                    @include borderRadius(8px);                
+                }
             }
         }
     }
