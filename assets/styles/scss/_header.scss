@@ -33,7 +33,7 @@
             text-align: center;
             padding: 15px 0;
 
-            // display: none;
+            display: none;
 
             @include setResponsiveDesign(600px) {
                 width: 400px;
