@@ -50,3 +50,50 @@
         }
     }
 }
+
+// BROWSER CORES ATTRIBUTES
+@mixin setBrowserCores($attr, $value, $cores: $browser-cores) {
+    #{$attr}: #{$value};
+
+    @each $core in $cores {
+        -#{$core}-#{$attr}: #{$value};
+    }
+}
+
+@mixin boxSizing($value: border-box) {
+    @include setBrowserCores(box-sizing, $value);
+}
+
+// FLEXBOX
+@mixin flex($justifyContent: center, $alignItems: center, $flexWrap: wrap) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-wrap: $flexWrap;
+}
+
+@mixin flexBasis($basis, $gap: 0) {
+    @if $gap == 0 {
+        flex-basis: $basis;
+    }
+
+    @else {
+        flex-basis: calc($basis - $gap);
+    }
+}
+
+@mixin flex1($gap: 0) {
+    @include flexBasis(100%, $gap);
+}
+
+@mixin flex2($gap: 0) {
+    @include flexBasis(50%, $gap);
+}
+
+@mixin flex3($gap: 0) {
+    @include flexBasis(33.33%, $gap);
+}
+
+@mixin flex4($gap: 0) {
+    @include flexBasis(25%, $gap);
+}

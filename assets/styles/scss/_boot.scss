@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    @include boxSizing;
+}
+
+body {
+    font-family: $font-barlow;
+    font-size: $font-size-default;
+    color: $color-very-dark-grayish-blue;
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    h1, h2 {
+        font-family: $font-fraunces;
+        color: $color-very-dark-desatured-blue;
+    }
+}

@@ -14,3 +14,27 @@
   src: url("../../fonts/Fraunces/static/Fraunces_9pt/Fraunces_9pt-Black.ttf") format("truetype");
   font-weight: 900;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  color: hsl(213deg, 9%, 39%);
+}
+body a {
+  text-decoration: none;
+}
+body img {
+  width: 100%;
+  display: block;
+}
+body h1, body h2 {
+  font-family: "Fraunces", serif;
+  color: hsl(212deg, 27%, 19%);
+}
