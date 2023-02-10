@@ -16,22 +16,18 @@
             padding: 0 8px;
         }
 
-        @include setResponsiveDesign(720px) {
-            gap: 50px;
+        @include setResponsiveDesign(560px) {
+            gap: 180px;
         }
 
-        @include setResponsiveDesign($layout-desktop) {
-            gap: 70px;
+        @include setResponsiveDesign(720px) {
+            gap: 40px;
         }
 
         &_title {
             font-size: 1.4em;
             text-transform: uppercase;
             text-align: center;
-
-            @include setResponsiveDesign(900px) {
-                font-size: 2em;
-            }
 
             h1 {
                 color: $color-white;
@@ -42,12 +38,12 @@
         &_arrowimage {
             width: 10%;
 
-            @include setResponsiveDesign(720px) {
-                width: 3%;
+            @include setResponsiveDesign(560px) {
+                width: 8%;
             }
 
-            @include setResponsiveDesign($layout-desktop) {
-                margin-bottom: 60px;
+            @include setResponsiveDesign(720px) {
+                width: 4%;
             }
         }
     }

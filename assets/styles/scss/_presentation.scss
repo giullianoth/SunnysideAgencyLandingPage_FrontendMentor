@@ -2,7 +2,7 @@
     @include flex;
 
     &.presentation1 {
-        @include setResponsiveDesign(768px) {
+        @include setResponsiveDesign(720px) {
             flex-direction: row-reverse;
         }
     }
@@ -10,7 +10,7 @@
     &_image {
         @include flex1;
 
-        @include setResponsiveDesign(768px) {
+        @include setResponsiveDesign(720px) {
             @include flex2;
         }
     }
@@ -21,14 +21,9 @@
         text-align: center;
         color: $color-dark-grayish-blue;
 
-        @include setResponsiveDesign(600px) {
-            width: 420px;
-            flex-basis: unset;
-        }
-
-        @include setResponsiveDesign(768px) {
+        @include setResponsiveDesign(720px) {
             @include flex2;
-            padding: 0 30px;
+            padding: 0;
             text-align: left;
         }
 
@@ -41,8 +36,12 @@
                 left: auto;
             }
 
-            @include setResponsiveDesign(768px) {
-                width: 300px;
+            @include setResponsiveDesign(460px) {
+                width: 360px;
+            }
+
+            @include setResponsiveDesign(1200px) {
+                width: 500px;
             }
 
             h1 {
@@ -54,14 +53,16 @@
             line-height: 1.6em;
             margin-bottom: 30px;
 
-            @include setResponsiveDesign(768px) {
-                width: 300px;
+            @include setResponsiveDesign(460px) {
+                width: 360px;
                 margin: {
-                    top: 0;
-                    right: auto;
-                    bottom: 30px;
                     left: auto;
+                    right: auto;
                 }
+            }
+
+            @include setResponsiveDesign(1200px) {
+                width: 500px;
             }
         }
 
@@ -71,10 +72,19 @@
             text-transform: uppercase;
             font-size: 0.875em;
             letter-spacing: 0.05em;
-
-            display: inline-block;
             position: relative;
-            padding: 0 8px;
+
+            @include setResponsiveDesign(460px) {
+                width: 360px;
+                margin: {
+                    left: auto;
+                    right: auto;
+                }
+            }
+
+            @include setResponsiveDesign(1200px) {
+                width: 500px;
+            }
 
             &.presentation1_info_cta {
                 a {
@@ -100,7 +110,7 @@
                 &::before {
                     content: "";
                     @include absoluteFull(unset);
-                    bottom: -1px;
+                    bottom: -3px;
                     height: 8px;
                     opacity: 0.3;
                     z-index: 1;

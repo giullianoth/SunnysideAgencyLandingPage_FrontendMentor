@@ -5,6 +5,10 @@
         @include flex1;
         position: relative;
 
+        @include setResponsiveDesign(720px) {
+            @include flex2;
+        }
+
         &_info {
             @include absoluteFull(unset);
             bottom: 0;
@@ -17,8 +21,32 @@
 
             text-align: center;
 
+            @include setResponsiveDesign(720px) {
+                padding-bottom: 20px;
+            }
+
+            @include setResponsiveDesign(1024px) {
+                padding-bottom: 40px;
+            }
+
+            @include setResponsiveDesign(1200px) {
+                padding-bottom: 60px;
+            }
+
             &_title {
                 margin-bottom: 30px;
+
+                @include setResponsiveDesign(720px) {
+                    width: 360px;
+                    margin: {
+                        left: auto;
+                        right: auto;
+                    }
+                }
+
+                @include setResponsiveDesign(1200px) {
+                    max-width: 500px;
+                }
 
                 h1 {
                     font-size: 1.6em;
@@ -40,6 +68,18 @@
             &_text {
                 font-size: 0.9em;
                 line-height: 1.6em;
+
+                @include setResponsiveDesign(720px) {
+                    max-width: 360px;
+                    margin: {
+                        left: auto;
+                        right: auto;
+                    }
+                }
+
+                @include setResponsiveDesign(1200px) {
+                    max-width: 500px;
+                }
 
                 &.service1_info_text {
                     color: $color-dark-desatured-cyan-text;

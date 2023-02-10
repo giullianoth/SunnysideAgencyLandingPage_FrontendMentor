@@ -37,6 +37,9 @@ body img {
   width: 100%;
   display: block;
 }
+body img.background {
+  pointer-events: none;
+}
 body h1, body h2 {
   font-family: "Fraunces", serif;
   color: hsl(212deg, 27%, 19%);
@@ -183,25 +186,20 @@ body h1, body h2 {
     padding: 0 8px;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 560px) {
   .main_headline_content {
-    gap: 50px;
+    gap: 180px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 720px) {
   .main_headline_content {
-    gap: 70px;
+    gap: 40px;
   }
 }
 .main_headline_content_title {
   font-size: 1.4em;
   text-transform: uppercase;
   text-align: center;
-}
-@media screen and (min-width: 900px) {
-  .main_headline_content_title {
-    font-size: 2em;
-  }
 }
 .main_headline_content_title h1 {
   color: hsl(0deg, 0%, 100%);
@@ -210,14 +208,14 @@ body h1, body h2 {
 .main_headline_content_arrowimage {
   width: 10%;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 560px) {
   .main_headline_content_arrowimage {
-    width: 3%;
+    width: 8%;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 720px) {
   .main_headline_content_arrowimage {
-    margin-bottom: 60px;
+    width: 4%;
   }
 }
 
@@ -227,7 +225,7 @@ body h1, body h2 {
   align-items: center;
   flex-wrap: wrap;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .main_presentation.presentation1 {
     flex-direction: row-reverse;
   }
@@ -235,7 +233,7 @@ body h1, body h2 {
 .main_presentation_image {
   flex-basis: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .main_presentation_image {
     flex-basis: 50%;
   }
@@ -246,16 +244,10 @@ body h1, body h2 {
   text-align: center;
   color: hsl(232deg, 10%, 55%);
 }
-@media screen and (min-width: 600px) {
-  .main_presentation_info {
-    width: 420px;
-    flex-basis: unset;
-  }
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .main_presentation_info {
     flex-basis: 50%;
-    padding: 0 30px;
+    padding: 0;
     text-align: left;
   }
 }
@@ -266,9 +258,14 @@ body h1, body h2 {
   margin-bottom: 20px;
   margin-left: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 460px) {
   .main_presentation_info_title {
-    width: 300px;
+    width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_presentation_info_title {
+    width: 500px;
   }
 }
 .main_presentation_info_title h1 {
@@ -278,13 +275,16 @@ body h1, body h2 {
   line-height: 1.6em;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 460px) {
   .main_presentation_info_text {
-    width: 300px;
-    margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 30px;
+    width: 360px;
     margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_presentation_info_text {
+    width: 500px;
   }
 }
 .main_presentation_info_cta {
@@ -293,9 +293,19 @@ body h1, body h2 {
   text-transform: uppercase;
   font-size: 0.875em;
   letter-spacing: 0.05em;
-  display: inline-block;
   position: relative;
-  padding: 0 8px;
+}
+@media screen and (min-width: 460px) {
+  .main_presentation_info_cta {
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_presentation_info_cta {
+    width: 500px;
+  }
 }
 .main_presentation_info_cta.presentation1_info_cta a::before {
   background-color: hsl(51deg, 100%, 49%);
@@ -314,7 +324,7 @@ body h1, body h2 {
   top: unset;
   left: 0;
   width: 100%;
-  bottom: -1px;
+  bottom: -3px;
   height: 8px;
   opacity: 0.3;
   z-index: 1;
@@ -333,6 +343,11 @@ body h1, body h2 {
   flex-basis: 100%;
   position: relative;
 }
+@media screen and (min-width: 720px) {
+  .main_services_service {
+    flex-basis: 50%;
+  }
+}
 .main_services_service_info {
   position: absolute;
   top: unset;
@@ -345,8 +360,35 @@ body h1, body h2 {
   padding-left: 20px;
   text-align: center;
 }
+@media screen and (min-width: 720px) {
+  .main_services_service_info {
+    padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main_services_service_info {
+    padding-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_services_service_info {
+    padding-bottom: 60px;
+  }
+}
 .main_services_service_info_title {
   margin-bottom: 30px;
+}
+@media screen and (min-width: 720px) {
+  .main_services_service_info_title {
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_services_service_info_title {
+    max-width: 500px;
+  }
 }
 .main_services_service_info_title h1 {
   font-size: 1.6em;
@@ -360,6 +402,18 @@ body h1, body h2 {
 .main_services_service_info_text {
   font-size: 0.9em;
   line-height: 1.6em;
+}
+@media screen and (min-width: 720px) {
+  .main_services_service_info_text {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_services_service_info_text {
+    max-width: 500px;
+  }
 }
 .main_services_service_info_text.service1_info_text {
   color: hsl(167deg, 40%, 24%);
