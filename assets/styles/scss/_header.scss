@@ -32,6 +32,10 @@
             background-color: $color-white;
             text-align: center;
             padding: 15px 0;
+            transform: translateY(-15%);
+            opacity: 0;
+
+            @include transition;
 
             display: none;
 
@@ -43,6 +47,7 @@
                 width: auto;
                 position: static;
                 background: none;
+                opacity: 1;
 
                 @include flex;
                 gap: 40px;

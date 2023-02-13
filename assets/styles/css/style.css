@@ -83,6 +83,9 @@ body h1, body h2 {
   background-color: hsl(0deg, 0%, 100%);
   text-align: center;
   padding: 15px 0;
+  transform: translateY(-15%);
+  opacity: 0;
+  transition: all 0.3s ease 0s;
   display: none;
 }
 @media screen and (min-width: 600px) {
@@ -95,6 +98,7 @@ body h1, body h2 {
     width: auto;
     position: static;
     background: none;
+    opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
