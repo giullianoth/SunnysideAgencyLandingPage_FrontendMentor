@@ -530,9 +530,10 @@ body h1, body h2 {
 }
 .main_footer_menu_list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 40px;
 }
 .main_footer_menu_list_item {
   list-style: none;

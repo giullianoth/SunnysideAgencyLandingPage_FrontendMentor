@@ -11,7 +11,8 @@
         margin-bottom: 60px;
 
         &_list {
-            @include flex(space-around);
+            @include flex;
+            gap: 40px;
 
             &_item {
                 list-style: none;
