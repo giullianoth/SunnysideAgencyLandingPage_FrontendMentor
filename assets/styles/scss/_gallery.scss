@@ -7,5 +7,9 @@
         @include setResponsiveDesign(340px, false) {
             @include flex1;
         }
+
+        @include setResponsiveDesign(720px) {
+            @include flex4;
+        }
     }
 }

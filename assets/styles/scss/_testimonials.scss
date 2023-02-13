@@ -16,11 +16,37 @@
     &_content {
         @include flex;
         gap: 70px;
+        
+        @include setResponsiveDesign(460px) {
+            width: 460px;
+            margin: {
+                left: auto;
+                right: auto;
+            }
+        }
+
+        @include setResponsiveDesign(900px) {
+            width: auto;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+
+        @include setResponsiveDesign(1200px) {
+            padding: {
+                left: 70px;
+                right: 70px;
+            }
+        }
 
         &_testimonial {
             @include flex1;
             padding: 0 20px;
             text-align: center;
+
+            @include setResponsiveDesign(900px) {
+                width: 460px;
+                @include flexBasis(unset);
+            }
 
             &_avatar {
                 margin-bottom: 40px;

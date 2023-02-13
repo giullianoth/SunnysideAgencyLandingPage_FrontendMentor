@@ -37,7 +37,7 @@
                 margin-bottom: 30px;
 
                 @include setResponsiveDesign(720px) {
-                    width: 360px;
+                    max-width: 360px;
                     margin: {
                         left: auto;
                         right: auto;
