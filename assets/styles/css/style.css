@@ -26,7 +26,7 @@
 body {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
-  color: hsl(213deg, 9%, 39%);
+  color: hsl(213, 9%, 39%);
   position: relative;
 }
 body a {
@@ -42,7 +42,7 @@ body img.background {
 }
 body h1, body h2 {
   font-family: "Fraunces", serif;
-  color: hsl(212deg, 27%, 19%);
+  color: hsl(212, 27%, 19%);
   font-weight: 900;
 }
 
@@ -66,7 +66,7 @@ body h1, body h2 {
 }
 .main_header_menu_mobileicon {
   font-size: 1.8em;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
 }
 @media screen and (min-width: 900px) {
@@ -80,7 +80,7 @@ body h1, body h2 {
   left: unset;
   right: 0;
   width: calc(100vw - 40px);
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   text-align: center;
   padding: 15px 0;
   transform: translateY(-15%);
@@ -115,7 +115,7 @@ body h1, body h2 {
   right: 0;
   width: 0;
   height: 0;
-  border: 20px solid hsl(0deg, 0%, 100%);
+  border: 20px solid hsl(0, 0%, 100%);
   border-top-color: transparent;
   border-left-color: transparent;
 }
@@ -138,38 +138,39 @@ body h1, body h2 {
   }
 }
 .main_header_menu_list_item a {
-  color: hsl(232deg, 10%, 55%);
+  color: hsl(232, 10%, 55%);
 }
 @media screen and (min-width: 900px) {
   .main_header_menu_list_item a {
-    color: hsl(0deg, 0%, 100%);
+    color: hsl(0, 0%, 100%);
   }
 }
 .main_header_menu_list_item_btn {
   font-family: "Fraunces", serif;
-  color: hsl(212deg, 27%, 19%) !important;
+  color: hsl(212, 27%, 19%) !important;
   text-transform: uppercase;
   font-size: 0.8em;
   display: inline-block;
   padding: 20px 30px;
-  background-color: hsl(51deg, 100%, 49%);
+  background-color: hsl(51, 100%, 49%);
   border-radius: 30px;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
 }
 @media screen and (min-width: 900px) {
   .main_header_menu_list_item_btn {
-    background-color: hsl(0deg, 0%, 100%);
+    background-color: hsl(0, 0%, 100%);
   }
 }
 .main_header_menu_list_item_btn:hover {
-  background-color: hsl(200deg, 100%, 72%);
-  color: hsl(0deg, 0%, 100%) !important;
+  background-color: hsl(200, 100%, 72%);
+  color: hsl(0, 0%, 100%) !important;
 }
 
 .main_headline {
   position: relative;
   z-index: 1;
+  background-color: hsl(200, 100%, 62%);
 }
 .main_headline_content {
   position: absolute;
@@ -206,7 +207,7 @@ body h1, body h2 {
   text-align: center;
 }
 .main_headline_content_title h1 {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   letter-spacing: 0.2em;
 }
 .main_headline_content_arrowimage {
@@ -242,11 +243,17 @@ body h1, body h2 {
     flex-basis: 50%;
   }
 }
+.main_presentation_image.presentation1_image {
+  background-color: hsl(51, 100%, 49%);
+}
+.main_presentation_image.presentation2_image {
+  background-color: hsl(7, 99%, 70%);
+}
 .main_presentation_info {
   flex-basis: 100%;
   padding: 60px 20px;
   text-align: center;
-  color: hsl(232deg, 10%, 55%);
+  color: hsl(232, 10%, 55%);
 }
 @media screen and (min-width: 720px) {
   .main_presentation_info {
@@ -312,15 +319,16 @@ body h1, body h2 {
   }
 }
 .main_presentation_info_cta.presentation1_info_cta a::before {
-  background-color: hsl(51deg, 100%, 49%);
+  background-color: hsl(51, 100%, 49%);
 }
 .main_presentation_info_cta.presentation2_info_cta a::before {
-  background-color: hsl(7deg, 99%, 70%);
+  background-color: hsl(7, 99%, 70%);
 }
 .main_presentation_info_cta a {
-  color: hsl(212deg, 27%, 19%);
+  color: hsl(212, 27%, 19%);
   position: relative;
   z-index: 2;
+  padding: 0 6px;
 }
 .main_presentation_info_cta a::before {
   content: "";
@@ -398,10 +406,10 @@ body h1, body h2 {
   font-size: 1.6em;
 }
 .main_services_service_info_title.service1_info_title h1 {
-  color: hsl(167deg, 40%, 24%);
+  color: hsl(167, 40%, 24%);
 }
 .main_services_service_info_title.service2_info_title h1 {
-  color: hsl(198deg, 62%, 26%);
+  color: hsl(198, 62%, 26%);
 }
 .main_services_service_info_text {
   font-size: 0.9em;
@@ -420,10 +428,10 @@ body h1, body h2 {
   }
 }
 .main_services_service_info_text.service1_info_text {
-  color: hsl(167deg, 40%, 24%);
+  color: hsl(167, 40%, 24%);
 }
 .main_services_service_info_text.service2_info_text {
-  color: hsl(198deg, 62%, 26%);
+  color: hsl(198, 62%, 26%);
 }
 
 .main_testimonials {
@@ -437,12 +445,12 @@ body h1, body h2 {
   text-transform: uppercase;
   font-size: 0.9em;
   letter-spacing: 0.2em;
-  color: hsl(210deg, 4%, 67%);
+  color: hsl(210, 4%, 67%);
 }
 .main_testimonials_content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 70px;
 }
@@ -498,7 +506,7 @@ body h1, body h2 {
 }
 .main_testimonials_content_testimonial_client p {
   font-size: 0.8em;
-  color: hsl(210deg, 4%, 67%);
+  color: hsl(210, 4%, 67%);
 }
 
 .main_gallery {
@@ -522,7 +530,7 @@ body h1, body h2 {
 }
 
 .main_footer {
-  background-color: hsl(167deg, 44%, 70%);
+  background-color: hsl(167, 44%, 70%);
   text-align: center;
   padding: 60px 20px;
 }
@@ -543,7 +551,7 @@ body h1, body h2 {
   list-style: none;
 }
 .main_footer_menu_list_item a {
-  color: hsl(168deg, 34%, 41%);
+  color: hsl(168, 34%, 41%);
 }
 .main_footer_social_list {
   display: flex;
@@ -557,12 +565,12 @@ body h1, body h2 {
   list-style: none;
 }
 .main_footer_social_list_item a {
-  color: hsl(168deg, 34%, 41%);
+  color: hsl(168, 34%, 41%);
 }
 .main_footer_attribution {
   font-size: 11px;
   text-align: center;
-  color: hsl(232deg, 10%, 55%);
+  color: hsl(232, 10%, 55%);
   position: absolute;
   top: unset;
   left: 0;
@@ -571,7 +579,7 @@ body h1, body h2 {
   padding: 8px 0;
 }
 .main_footer_attribution a {
-  color: hsl(167deg, 40%, 24%);
+  color: hsl(167, 40%, 24%);
 }
 .main_footer_attribution a:hover {
   text-decoration: underline;

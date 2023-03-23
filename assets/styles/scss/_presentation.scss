@@ -13,6 +13,14 @@
         @include setResponsiveDesign(720px) {
             @include flex2;
         }
+
+        &.presentation1_image {
+            background-color: $color-yellow;
+        }
+
+        &.presentation2_image {
+            background-color: $color-soft-red;
+        }
     }
 
     &_info {
@@ -106,6 +114,7 @@
                 color: $color-very-dark-desatured-blue;
                 position: relative;
                 z-index: 2;
+                padding: 0 6px;
 
                 &::before {
                     content: "";

@@ -119,8 +119,8 @@
 }
 
 // TRANSITION
-@mixin transition($property: all, $duration: 0.3s, $timing-function: ease, $delay: 0s) {
-    transition: $property $duration $timing-function $delay;
+@mixin transition($property: all, $duration: $transition-duration, $timingFunction: ease, $delay: 0s) {
+    transition: $property $duration $timing-timingFunction $delay;
 }
 
 // RESPONSIVE DESIGN

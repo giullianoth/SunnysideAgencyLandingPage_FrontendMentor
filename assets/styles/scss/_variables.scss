@@ -1,27 +1,28 @@
 // **************
 // *   LAYOUT   *
 // **************
-$layout-mobile:   375px;
+$layout-mobile: 375px;
 $layout-desktop: 1440px;
 
 // **************
 // *   COLORS   *
 // **************
 // Primary:
-$color-soft-red:                               hsl(7, 99%, 70%);
-$color-yellow:                               hsl(51, 100%, 49%);
-$color-dark-desatured-cyan-text:             hsl(167, 40%, 24%);
-$color-dark-blue-text:                       hsl(198, 62%, 26%);
-$color-dark-moderate-cyan-footer:            hsl(168, 34%, 41%);
+$color-soft-red: hsl(7, 99%, 70%);
+$color-yellow: hsl(51, 100%, 49%);
+$color-dark-desatured-cyan-text: hsl(167, 40%, 24%);
+$color-dark-blue-text: hsl(198, 62%, 26%);
+$color-dark-moderate-cyan-footer: hsl(168, 34%, 41%);
 $color-dark-moderate-cyan-footer-background: hsl(167, 44%, 70%);
-$color-blue-hover:                          hsl(200, 100%, 72%);
+$color-blue-background: hsl(200, 100%, 62%);
+$color-blue-hover: hsl(200, 100%, 72%);
 
 // Neutral:
 $color-very-dark-desatured-blue: hsl(212, 27%, 19%);
-$color-very-dark-grayish-blue:    hsl(213, 9%, 39%);
-$color-dark-grayish-blue:        hsl(232, 10%, 55%);
-$color-grayish-blue:              hsl(210, 4%, 67%);
-$color-white:                      hsl(0, 0%, 100%);
+$color-very-dark-grayish-blue: hsl(213, 9%, 39%);
+$color-dark-grayish-blue: hsl(232, 10%, 55%);
+$color-grayish-blue: hsl(210, 4%, 67%);
+$color-white: hsl(0, 0%, 100%);
 
 // ******************
 // *   TIPOGRAPHY   *
@@ -31,7 +32,7 @@ $font-size-default: 18px;
 
 // Font:
 $font-barlow: 'Barlow', sans-serif;
-$font-fraunces:  'Fraunces', serif;
+$font-fraunces: 'Fraunces', serif;
 
 // Font presets:
 $font-path: "../../fonts";
@@ -39,7 +40,7 @@ $font-path: "../../fonts";
 $font-barlow-presets: (
     weights: (600),
     family: $font-barlow,
-    files: ("Barlow-SemiBold.ttf"),    
+    files: ("Barlow-SemiBold.ttf"),
     path: ("Barlow"),
     format: ("truetype")
 );
@@ -57,4 +58,12 @@ $fonts: $font-barlow-presets, $font-fraunces-presets;
 // *********************
 // *   BROWSER CORES   *
 // *********************
-$browser-cores: ("moz", "webkit");
+$browser-cores: (
+    "moz",
+    "webkit"
+);
+
+// ******************
+// *   TRANSITION   *
+// ******************
+$transition-duration: 0.3s;

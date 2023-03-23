@@ -14,7 +14,7 @@
     }
 
     &_content {
-        @include flex;
+        @include flex(center, flex-start);
         gap: 70px;
         
         @include setResponsiveDesign(460px) {

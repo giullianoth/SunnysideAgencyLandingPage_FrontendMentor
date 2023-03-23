@@ -1,6 +1,7 @@
 .main_headline {
     position: relative;
     z-index: 1;
+    background-color: $color-blue-background;
 
     &_content {
         @include absoluteFull;
