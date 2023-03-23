@@ -541,7 +541,9 @@ body h1, body h2 {
   padding: 60px 20px;
 }
 .main_footer_title {
+  margin: auto;
   margin-bottom: 30px;
+  width: 124px;
 }
 .main_footer_menu {
   margin-bottom: 60px;
