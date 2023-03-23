@@ -1,5 +1,6 @@
 .main_presentation {
     @include flex;
+    @include containerWidth;
 
     &.presentation1 {
         @include setResponsiveDesign(720px) {

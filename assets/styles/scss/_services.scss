@@ -1,5 +1,6 @@
 .main_services {
     @include flex;
+    @include containerWidth;
 
     &_service {
         @include flex1;

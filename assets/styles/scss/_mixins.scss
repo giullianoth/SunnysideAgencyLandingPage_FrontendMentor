@@ -51,6 +51,12 @@
     }
 }
 
+// CONTAINER WIDTH
+@mixin containerWidth($maxWidth: 1440px) {
+    max-width: $maxWidth;
+    margin: auto;
+}
+
 // BROWSER CORES ATTRIBUTES
 @mixin setBrowserCores($attr, $value, $cores: $browser-cores) {
     #{$attr}: #{$value};
@@ -120,7 +126,7 @@
 
 // TRANSITION
 @mixin transition($property: all, $duration: $transition-duration, $timingFunction: ease, $delay: 0s) {
-    transition: $property $duration $timing-timingFunction $delay;
+    transition: $property $duration $timingFunction $delay;
 }
 
 // RESPONSIVE DESIGN

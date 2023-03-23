@@ -1,5 +1,6 @@
 .main_testimonials {
-    margin: 60px 0;
+    @include containerWidth;
+    margin: 60px auto;
 
     &_title {
         text-align: center;
