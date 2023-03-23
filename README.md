@@ -21,6 +21,14 @@ Neste projeto, os usuários são capazes de:
 - *View the optimal layout for the site depending on their device's screen size.*
 - *See hover states for all interactive elements on the page.*
 
+## Índice | Index
+
+- [Status do projeto | Project status](#status-do-projeto--project-status)
+- [Layout](#layout)
+- [Tecnologias utilizadas | Technologies used](#tecnologias-utilizadas--technologies-used)
+- [Como instalar | How to install](#como-instalar--how-to-install)
+- [Autor | Author](#autor--author)
+
 ## Status do projeto | Project status
 
 Projeto finalizado, sendo aberto a propostas de melhorias ou correções.
@@ -33,7 +41,23 @@ Construído a partir do método *mobile-first*, o projeto é responsivo, ou seja
 
 *Built from the mobile-first method, the project is responsive, that is, it is adaptable to the most varied sizes and screen resolutions, as shown below.*
 
-[imagem]
+![Captura de tela em 375px | Screenshot in 375px](assets/images/screenshots/screenshot_375px.png)
+
+Captura de tela em 375px | Screenshot in 375px
+
+---
+
+![Captura de tela em 768px | Screenshot in 768px](assets/images/screenshots/screenshot_768px.png)
+
+Captura de tela em 768px | Screenshot in 768px
+
+---
+
+![Captura de tela em 1440px | Screenshot in 1440px](assets/images/screenshots/screenshot_1440px.png)
+
+Captura de tela em 1440px | Screenshot in 1440px
+
+---
 
 Você também pode conferir a página acessando este link: [https://sunnyside-inky.vercel.app/](https://sunnyside-inky.vercel.app/).
 
