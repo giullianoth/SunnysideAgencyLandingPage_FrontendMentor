@@ -1,15 +1,24 @@
-.main_gallery {
-    @include flex;
+@include theme() {
+    &gallery {
+        @include containerFluid;
+        @include flex(flex-start, stretch);
 
-    &_item {
-        @include flex2;
+        &__item {
+            @include flex2;
+            opacity: 0.8;
+            @include transition;
 
-        @include setResponsiveDesign(340px, false) {
-            @include flex1;
-        }
+            @include setResponsiveDesign(340px, true) {
+                @include flex1;
+            }
 
-        @include setResponsiveDesign(720px) {
-            @include flex4;
+            @include setResponsiveDesign($breakpoint-tablet) {
+                @include flex4;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }

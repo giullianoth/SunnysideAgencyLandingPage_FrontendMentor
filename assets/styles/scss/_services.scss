@@ -1,93 +1,73 @@
-.main_services {
-    @include flex;
-    // @include containerWidth;
+@include theme() {
+    &services {
+        @include containerFluid;
+        @include flex(flex-start, stretch);
 
-    &_service {
-        @include flex1;
-        position: relative;
+        &__item {
+            @include flex1;
 
-        @include setResponsiveDesign(720px) {
-            @include flex2;
-        }
-
-        &_info {
-            @include absoluteFull(unset);
-            bottom: 0;
-            padding: {
-                top: 0;
-                right: 20px;
-                bottom: 60px;
-                left: 20px;
+            @include setResponsiveDesign($breakpoint-tablet) {
+                @include flex2;
             }
 
-            text-align: center;
-
-            @include setResponsiveDesign(720px) {
-                padding-bottom: 20px;
+            &.green {
+                color: $color-dark-desatured-cyan-text;
             }
 
-            @include setResponsiveDesign(1024px) {
-                padding-bottom: 40px;
+            &.blue {
+                color: $color-dark-blue-text;
             }
 
-            @include setResponsiveDesign(1200px) {
+            &-info {
+                @include flex(flex-end);
+                @include column;
+                padding-inline: 20px;
                 padding-bottom: 60px;
-            }
+                text-align: center;
 
-            &_title {
-                margin-bottom: 30px;
-
-                @include setResponsiveDesign(720px) {
-                    max-width: 360px;
-                    margin: {
-                        left: auto;
-                        right: auto;
-                    }
+                @include setResponsiveDesign($breakpoint-tablet) {
+                    padding-bottom: 20px;
                 }
 
-                @include setResponsiveDesign(1200px) {
+                @include setResponsiveDesign($breakpoint-desktop-sd) {
+                    padding-bottom: 40px;
+                }
+
+                @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                    padding-bottom: 60px;
+                }
+            }
+
+            &-title {
+                margin-bottom: 30px;
+
+                @include setResponsiveDesign($breakpoint-tablet) {
+                    max-width: 360px;
+                    margin-inline: auto;
+                }
+
+                @include setResponsiveDesign($breakpoint-desktop-hd1) {
                     max-width: 500px;
                 }
 
                 h1 {
                     font-size: 1.6em;
-                }
-
-                &.service1_info_title {
-                    h1 {
-                        color: $color-dark-desatured-cyan-text;
-                    }
-                }
-
-                &.service2_info_title {
-                    h1 {
-                        color: $color-dark-blue-text;
-                    }
+                    color: currentColor;
                 }
             }
 
-            &_text {
+            &-text {
                 font-size: 0.9em;
-                line-height: 1.6em;
+                color: currentColor;
 
-                @include setResponsiveDesign(720px) {
+                @include setResponsiveDesign($breakpoint-tablet) {
                     max-width: 360px;
-                    margin: {
-                        left: auto;
-                        right: auto;
-                    }
+                    margin-inline: auto;
                 }
 
-                @include setResponsiveDesign(1200px) {
+                @include setResponsiveDesign($breakpoint-desktop-hd1) {
                     max-width: 500px;
-                }
-
-                &.service1_info_text {
-                    color: $color-dark-desatured-cyan-text;
-                }
-
-                &.service2_info_text {
-                    color: $color-dark-blue-text;
+                    font-size: 1em;
                 }
             }
         }

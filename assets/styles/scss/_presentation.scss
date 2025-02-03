@@ -1,131 +1,142 @@
-.main_presentation {
-    @include flex;
-    // @include containerWidth;
+@include theme() {
+    &presentation {
+        @include containerFluid;
 
-    &.presentation1 {
-        @include setResponsiveDesign(720px) {
-            flex-direction: row-reverse;
-        }
-    }
+        &__item {
+            @include flex(flex-start);
 
-    &_image {
-        @include flex1;
-
-        @include setResponsiveDesign(720px) {
-            @include flex2;
-        }
-
-        &.presentation1_image {
-            background-color: $color-yellow;
-        }
-
-        &.presentation2_image {
-            background-color: $color-soft-red;
-        }
-    }
-
-    &_info {
-        @include flex1;
-        padding: 60px 20px;
-        text-align: center;
-        color: $color-dark-grayish-blue;
-
-        @include setResponsiveDesign(720px) {
-            @include flex2;
-            padding: 0;
-            text-align: left;
-        }
-
-        &_title {
-            width: 90%;
-            margin: {
-                top: 0;
-                right: auto;
-                bottom: 20px;
-                left: auto;
-            }
-
-            @include setResponsiveDesign(460px) {
-                width: 360px;
-            }
-
-            @include setResponsiveDesign(1200px) {
-                width: 500px;
-            }
-
-            h1 {
-                font-size: 1.6em;
-            }
-        }
-
-        &_text {
-            line-height: 1.6em;
-            margin-bottom: 30px;
-
-            @include setResponsiveDesign(460px) {
-                width: 360px;
-                margin: {
-                    left: auto;
-                    right: auto;
+            @include setResponsiveDesign($breakpoint-tablet) {
+                &:nth-child(odd) {
+                    @include rowReverse;
                 }
             }
 
-            @include setResponsiveDesign(1200px) {
-                width: 500px;
-            }
-        }
-
-        &_cta {
-            font-family: $font-fraunces;
-            font-weight: 900;
-            text-transform: uppercase;
-            font-size: 0.875em;
-            letter-spacing: 0.05em;
-            position: relative;
-
-            @include setResponsiveDesign(460px) {
-                width: 360px;
-                margin: {
-                    left: auto;
-                    right: auto;
-                }
-            }
-
-            @include setResponsiveDesign(1200px) {
-                width: 500px;
-            }
-
-            &.presentation1_info_cta {
-                a {
-                    &::before {
+            &.yellow {
+                .ss-presentation__item {
+                    &-image {
                         background-color: $color-yellow;
                     }
-                }
-            }
 
-            &.presentation2_info_cta {
-                a {
-                    &::before {
-                        background-color: $color-soft-red;
+                    &-cta {
+                        a {
+                            &::before {
+                                background-color: $color-yellow;
+                            }
+                        }
                     }
                 }
             }
 
-            a {
-                color: $color-very-dark-desatured-blue;
-                position: relative;
-                z-index: 2;
-                padding: 0 6px;
+            &.red {
+                .ss-presentation__item {
+                    &-image {
+                        background-color: $color-soft-red;
+                    }
 
-                &::before {
-                    content: "";
-                    @include absoluteFull(unset);
-                    bottom: -3px;
-                    height: 8px;
-                    opacity: 0.3;
-                    z-index: 1;
+                    &-cta {
+                        a {
+                            &::before {
+                                background-color: $color-soft-red;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-image {
+                @include flex1;
+
+                @include setResponsiveDesign($breakpoint-tablet) {
+                    @include flex2;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &-info {
+                @include flex1;
+                padding: 60px 20px;
+                text-align: center;
+                color: $color-dark-grayish-blue;
+
+                @include setResponsiveDesign($breakpoint-tablet) {
+                    @include flex2;
+                    padding: 0;
+                    text-align: left;
+                }
+            }
+
+            &-title {
+                width: 90%;
+                margin-inline: auto;
+                margin-bottom: 20px;
+
+                @include setResponsiveDesign($breakpoint-mobile) {
+                    width: 360px;
+                }
+
+                @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                    width: 500px;
+                }
+
+                h1 {
+                    font-size: 1.6em;
+                }
+            }
+
+            &-text {
+                margin-bottom: 30px;
+
+                @include setResponsiveDesign($breakpoint-mobile) {
+                    width: 360px;
+                    margin-inline: auto;
+                }
+
+                @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                    width: 500px;
+                }
+            }
+
+            &-cta {
+                @include setResponsiveDesign($breakpoint-mobile) {
+                    width: 360px;
+                    margin-inline: auto;
+                }
+
+                @include setResponsiveDesign($breakpoint-desktop-hd1) {
+                    width: 500px;
+                }
                 
-                    @include borderRadius(8px);                
+                a {
+                    @include relative;
+                    z-index: 2;
+                    color: $color-very-dark-desatured-blue;
+                    font-family: $font-fraunces;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    font-size: 0.9em;
+                    letter-spacing: 0.05em;
+                    padding-inline: 6px;
+                    display: inline-block;
+
+                    &:hover {
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        @include absoluteFull(unset);
+                        bottom: -3px;
+                        height: 8px;
+                        opacity: 0.3;
+                        z-index: -1;
+                        @include borderRadius(8px);
+                        @include transition;
+                    }
                 }
             }
         }

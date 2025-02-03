@@ -12,262 +12,282 @@
   <link rel="stylesheet" href="assets/styles/css/style.css">  
 </head>
 <body>
-  <header class="main_header">
-      <div class="main_header_logo">
-        <h1>Sunnyside</h1>
-        <a href="#">
-          <img src="assets/images/logo.svg" alt="Sunnyside">
-        </a>
+  <header class="ss-header">
+    <div class="ss-header__logo">
+      <h1>Sunnyside</h1>
+
+      <a href="#">
+        <img src="/assets/images/logo.svg" alt="Sunnyside">
+      </a>
+    </div>
+
+    <nav class="ss-header__navigation">
+      <div class="ss-header__navigation-icon j_mobile_menu_icon">
+        <img src="/assets/images/icon-hamburger.svg" alt="Open Menu">
       </div>
 
-      <nav class="main_header_menu">
-        <span class="main_header_menu_mobileicon j_mobile_menu_icon">
-          <i class="fa-solid fa-bars"></i>
-        </span>
+      <ul class="ss-header__menu j_mobile_menu">
+        <li class="ss-header__menu-item">
+          <a href="#">About</a>
+        </li>
 
-        <ul class="main_header_menu_list j_mobile_menu">
-          <li class="main_header_menu_list_item">
-            <a href="#">About</a>
-          </li>
-          <li class="main_header_menu_list_item">
-            <a href="#">Services</a>
-          </li>
-          <li class="main_header_menu_list_item">
-            <a href="#">Projects</a>
-          </li>
-          <li class="main_header_menu_list_item">
-            <a href="#" class="main_header_menu_list_item_btn">Contact</a>
-          </li>
-        </ul>
-      </nav>
+        <li class="ss-header__menu-item">
+          <a href="#">Services</a>
+        </li>
+
+        <li class="ss-header__menu-item">
+          <a href="#">Projects</a>
+        </li>
+
+        <li class="ss-header__menu-item">
+          <a class="ss-header__menu-button" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section class="main_headline ">
+    <section class="ss-headline">
+      <div class="ss-headline__container ss-image-container">
         <picture>
-          <source media="(min-width: 720px)" srcset="assets/images/desktop/image-header.jpg">
-          <img src="assets/images/mobile/image-header.jpg" alt="Headline image" class="background">
+          <source media="(min-width: 600px)" srcset="/assets/images/desktop/image-header.jpg">
+          <img src="/assets/images/mobile/image-header.jpg" alt="Background">
         </picture>
 
-        <div class="main_headline_content">
-          <header class="main_headline_content_title">
+        <div class="ss-headline__wrapper ss-image-container-wrapper">
+          <header class="ss-headline__title">
             <h1>We are creatives</h1>
           </header>
-          <div class="main_headline_content_arrowimage">
-            <img src="assets/images/icon-arrow-down.svg" alt="Arrow down">
+
+          <div class="ss-headline__arrow">
+            <img src="/assets/images/icon-arrow-down.svg" alt="Arrow down">
           </div>
         </div>
+      </div>
     </section>
 
-    <section class="main_presentation presentation1">
-      <div class="main_presentation_image presentation1_image">
+    <section class="ss-presentation">
+      <article class="ss-presentation__item yellow">
+        <div class="ss-presentation__item-image">
+          <picture>
+            <source media="(min-width: 768px)" srcset="/assets/images/desktop/image-transform.jpg">
+            <img src="/assets/images/mobile/image-transform.jpg" alt="Transform your brand">
+          </picture>
+        </div>
+
+        <div class="ss-presentation__item-info">
+          <header class="ss-presentation__item-title">
+            <h1>Transform your brand</h1>
+          </header>
+
+          <p class="ss-presentation__item-text">We are a full-service creative agency specializing in helping brands grow fast. 
+            Engage your clients through compelling visuals that do most of the marketing for you.</p>
+
+          <div class="ss-presentation__item-cta">
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="ss-presentation__item red">
+        <div class="ss-presentation__item-image">
+          <picture>
+            <source media="(min-width: 768px)" srcset="/assets/images/desktop/image-stand-out.jpg">
+            <img src="/assets/images/mobile/image-stand-out.jpg" alt="Stand out to the right audience">
+          </picture>
+        </div>
+
+        <div class="ss-presentation__item-info">
+          <header class="ss-presentation__item-title">
+            <h1>Stand out to the right audience</h1>
+          </header>
+
+          <p class="ss-presentation__item-text">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</p>
+
+          <div class="ss-presentation__item-cta">
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="ss-services">
+      <article class="ss-services__item ss-image-container green">
         <picture>
-          <source media="(min-width: 720px)" srcset="assets/images/desktop/image-transform.jpg">
-          <img src="assets/images/mobile/image-transform.jpg" alt="Transform your brand" class="background">
-        </picture>
-      </div>
-
-      <div class="main_presentation_info presentation1_info">
-        <header class="main_presentation_info_title">
-          <h1>Transform your brand</h1>
-        </header>
-        <p class="main_presentation_info_text">
-          We are a full-service creative agency specializing in helping brands grow fast. 
-          Engage your clients through compelling visuals that do most of the marketing for you.
-        </p>
-        <p class="main_presentation_info_cta presentation1_info_cta">
-          <a href="#">Learn more</a>
-        </p>
-      </div>
-    </section>
-
-    <section class="main_presentation presentation2">
-      <div class="main_presentation_image presentation2_image">
-        <picture>
-          <source media="(min-width: 720px)" srcset="assets/images/desktop/image-stand-out.jpg">
-          <img src="assets/images/mobile/image-stand-out.jpg" alt="Stand out to the right audience" class="background">
-        </picture>
-      </div>
-
-      <div class="main_presentation_info presentation2_info">
-        <header class="main_presentation_info_title">
-          <h1>Stand out to the right audience</h1>
-        </header>
-        <p class="main_presentation_info_text">
-          Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.
-        </p>
-        <p class="main_presentation_info_cta presentation2_info_cta">
-          <a href="#">Learn more</a>
-        </p>
-      </div>
-    </section>
-
-    <section class="main_services">
-      <article class="main_services_service service1">
-        <picture class="service_background">
-          <source media="(min-width: 720px)" srcset="assets/images/desktop/image-graphic-design.jpg">
-          <img src="assets/images/mobile/image-graphic-design.jpg" alt="Graphic Design" class="background">
+          <source media="(min-width: 768px)" srcset="/assets/images/desktop/image-graphic-design.jpg">
+          <img src="/assets/images/mobile/image-graphic-design.jpg" alt="Graphic design">
         </picture>
 
-        <div class="main_services_service_info">
-          <header class="main_services_service_info_title service1_info_title">
+        <div class="ss-services__item-info ss-image-container-wrapper">
+          <header class="ss-services__item-title">
             <h1>Graphic design</h1>
           </header>
-          <p class="main_services_service_info_text service1_info_text">
-            Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention.
-          </p>
+
+          <p class="ss-services__item-text">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention.</p>
         </div>
       </article>
 
-      <article class="main_services_service service2">
-        <picture class="service_background">
-          <source media="(min-width: 720px)" srcset="assets/images/desktop/image-photography.jpg">
-          <img src="assets/images/mobile/image-photography.jpg" alt="Photography" class="background">
+      <article class="ss-services__item ss-image-container blue">
+        <picture>
+          <source media="(min-width: 768px)" srcset="/assets/images/desktop/image-photography.jpg">
+          <img src="/assets/images/mobile/image-photography.jpg" alt="Photography">
         </picture>
 
-        <div class="main_services_service_info">
-          <header class="main_services_service_info_title service2_info_title">
+        <div class="ss-services__item-info ss-image-container-wrapper">
+          <header class="ss-services__item-title">
             <h1>Photography</h1>
           </header>
-          <p class="main_services_service_info_text service2_info_text">
-            Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-          </p>
+
+          <p class="ss-services__item-text">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
         </div>
       </article>
     </section>
 
-    <section class="main_testimonials">
-      <header class="main_testimonials_title">
-        <h1>Client testimonials</h1>
-      </header>
+    <section class="ss-testimonials">
+      <div class="ss-testimonials__container">
+        <header class="ss-testimonials__title">
+          <h1>Client testimonials</h1>
+        </header>
 
-      <div class="main_testimonials_content">
-        <article class="main_testimonials_content_testimonial">
-          <div class="main_testimonials_content_testimonial_avatar">
-            <img src="assets/images/image-emily.jpg" alt="Emily R.">
-          </div>
-          <p class="main_testimonials_content_testimonial_text">
-            We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-          </p>
-          <header class="main_testimonials_content_testimonial_client">
-            <h2>Emily R.</h2>
-            <p>Marketing Director</p>
-          </header>
-        </article>
+        <div class="ss-testimonials__list">
+          <article class="ss-testimonials__item">
+            <div class="ss-testimonials__item-avatar">
+              <img src="/assets/images/image-emily.jpg" alt="Emily R.">
+            </div>
 
-        <article class="main_testimonials_content_testimonial">
-          <div class="main_testimonials_content_testimonial_avatar">
-            <img src="assets/images/image-thomas.jpg" alt="Thomas S.">
-          </div>
-          <p class="main_testimonials_content_testimonial_text">
-            Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.
-          </p>
+            <p class="ss-testimonials__item-testimonial">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
 
-          <header class="main_testimonials_content_testimonial_client">
-            <h2>Thomas S.</h2>
-            <p>Chief Operating Officer</p>
-          </header>
-        </article>
+            <header class="ss-testimonials__item-author">
+              <h2 class="ss-testimonials__item-name">Emily R.</h2>
+              <p class="ss-testimonials__item-role">Marketing Director</p>
+            </header>
+          </article>
 
-        <article class="main_testimonials_content_testimonial">
-          <div class="main_testimonials_content_testimonial_avatar">
-            <img src="assets/images/image-jennie.jpg" alt="Jennie F.">
-          </div>
-          <p class="main_testimonials_content_testimonial_text">
-            Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-          </p>
+          <article class="ss-testimonials__item">
+            <div class="ss-testimonials__item-avatar">
+              <img src="/assets/images/image-thomas.jpg" alt="Thomas S.">
+            </div>
 
-          <header class="main_testimonials_content_testimonial_client">
-            <h2>Jennie F.</h2>
-            <p>Business Owner</p>
-          </header>
-        </article>
+            <p class="ss-testimonials__item-testimonial">Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.</p>
+
+            <header class="ss-testimonials__item-author">
+              <h2 class="ss-testimonials__item-name">Thomas S.</h2>
+              <p class="ss-testimonials__item-role">Chief Operating Officer</p>
+            </header>
+          </article>
+
+          <article class="ss-testimonials__item">
+            <div class="ss-testimonials__item-avatar">
+              <img src="/assets/images/image-jennie.jpg" alt="Jennie F.">
+            </div>
+
+            <p class="ss-testimonials__item-testimonial">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+
+            <header class="ss-testimonials__item-author">
+              <h2 class="ss-testimonials__item-name">Jennie F.</h2>
+              <p class="ss-testimonials__item-role">Business Owner</p>
+            </header>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="main_gallery">
-      <div class="main_gallery_item">
+    <section class="ss-gallery">
+      <div class="ss-gallery__item">
         <a href="#">
           <picture>
-            <source media="(min-width: 720px)" srcset="assets/images/desktop/image-gallery-milkbottles.jpg">
-            <img src="assets/images/mobile/image-gallery-milkbottles.jpg" alt="Gallery picture">
+            <source media="(min-width: 768px)" srcset="/assets/images/desktop/image-gallery-milkbottles.jpg">
+            <img src="/assets/images/mobile/image-gallery-milkbottles.jpg" alt="Gallery picture 1">
           </picture>
         </a>
       </div>
 
-      <div class="main_gallery_item">
+      <div class="ss-gallery__item">
         <a href="#">
           <picture>
-            <source media="(min-width: 720px)" srcset="assets/images/desktop/image-gallery-orange.jpg">
-            <img src="assets/images/mobile/image-gallery-orange.jpg" alt="Gallery picture">
+            <source media="(min-width: 768px)" srcset="/assets/images/desktop/image-gallery-orange.jpg">
+            <img src="/assets/images/mobile/image-gallery-orange.jpg" alt="Gallery picture 2">
           </picture>
         </a>
       </div>
 
-      <div class="main_gallery_item">
+      <div class="ss-gallery__item">
         <a href="#">
           <picture>
-            <source media="(min-width: 720px)" srcset="assets/images/desktop/image-gallery-cone.jpg">
-            <img src="assets/images/mobile/image-gallery-cone.jpg" alt="Gallery picture">
+            <source media="(min-width: 768px)" srcset="/assets/images/desktop/image-gallery-cone.jpg">
+            <img src="/assets/images/mobile/image-gallery-cone.jpg" alt="Gallery picture 3">
           </picture>
         </a>
       </div>
 
-      <div class="main_gallery_item">
+      <div class="ss-gallery__item">
         <a href="#">
           <picture>
-            <source media="(min-width: 720px)" srcset="assets/images/desktop/image-gallery-sugarcubes.jpg">
-            <img src="assets/images/mobile/image-gallery-sugar-cubes.jpg" alt="Gallery picture">
+            <source media="(min-width: 768px)" srcset="/assets/images/desktop/image-gallery-sugarcubes.jpg">
+            <img src="/assets/images/mobile/image-gallery-sugar-cubes.jpg" alt="Gallery picture 4">
           </picture>
         </a>
       </div>
     </section>
   </main>
 
-  <footer class="main_footer">
-      <div class="main_footer_title">
-        <a href="#">
-          <img src="assets/images/logo2.svg" alt="Sunnyside">
-        </a>
-      </div>
+  <footer class="ss-footer">
+    <div class="ss-footer__title">
+      <a href="#">
+        <img src="/assets/images/logo2.svg" alt="Sunnyside">
+      </a>
+    </div>
 
-      <nav class="main_footer_menu">
-        <ul class="main_footer_menu_list">
-          <li class="main_footer_menu_list_item">
-            <a href="#">About</a>
-          </li>
-          <li class="main_footer_menu_list_item">
-            <a href="#">Services</a>
-          </li>
-          <li class="main_footer_menu_list_item">
-            <a href="#">Projects</a>
-          </li>
-        </ul>
-      </nav>
+    <nav class="ss-footer__menu">
+      <ul class="ss-footer__menu-list">
+        <li class="ss-footer__menu-item">
+          <a href="#">About</a>
+        </li>
 
-      <nav class="main_footer_social">
-        <ul class="main_footer_social_list">
-          <li class="main_footer_social_list_item">
-            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-          </li>
-          <li class="main_footer_social_list_item">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-          <li class="main_footer_social_list_item">
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          </li>
-          <li class="main_footer_social_list_item">
-            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-          </li>
-        </ul>
-      </nav>
-      
-      <div class="main_footer_attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Giulliano Guimarães</a>.
-      </div> 
+        <li class="ss-footer__menu-item">
+          <a href="#">Services</a>
+        </li>
+
+        <li class="ss-footer__menu-item">
+          <a href="#">Projects</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="ss-footer__social">
+      <ul class="ss-footer__social-list">
+        <li class="ss-footer__social-item">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/images/icon-facebook.svg" alt="Facebook" title="Facebook">
+          </a>
+        </li>
+
+        <li class="ss-footer__social-item">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/images/icon-instagram.svg" alt="Instagram" title="Instagram">
+          </a>
+        </li>
+
+        <li class="ss-footer__social-item">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/images/icon-twitter.svg" alt="Twitter" title="Twitter">
+          </a>
+        </li>
+
+        <li class="ss-footer__social-item">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/images/icon-pinterest.svg" alt="Pinterest" title="Pinterest">
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="ss-footer__attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/giullianoth" target="_blank" rel="noopener noreferrer">Giulliano Guimarães</a>.
+    </div>
   </footer>
 
-  <script src="assets/scripts/script.js"></script>
+  <script src="/assets/scripts/script.js"></script>
 </body>
 </html>

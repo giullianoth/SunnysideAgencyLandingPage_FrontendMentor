@@ -1,56 +1,52 @@
-.main_header {
-    @include absoluteFull;
-    @include flex(space-between);
-    z-index: 2;
+@include theme() {
+    &header {
+        @include absoluteFull;
+        @include flex(space-between);
+        z-index: 2;
+        padding: 20px;
 
-    padding: 20px;
-
-    &_logo {
-        h1 {
-            display: none;
-        }
-    }
-
-    &_menu {
-        position: relative;
-
-        &_mobileicon {
-            font-size: 1.8em;
-            color: $color-white;
-            cursor: pointer;
-
-            @include setResponsiveDesign(900px) {
+        &__logo {
+            h1 {
                 display: none;
             }
         }
 
-        &_list {
+        &__navigation {
+            @include relative;
+
+            &-icon {
+                font-size: 1.8em;
+                color: $color-white;
+                cursor: pointer;
+
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    display: none;
+                }
+            }
+        }
+
+        &__menu {
             @include absolute(calc(100% + 60px), unset);
             right: 0;
             width: calc(100vw - 40px);
-
+            max-width: 400px;
             background-color: $color-white;
             text-align: center;
-            padding: 15px 0;
+            padding-block: 15px;
             transform: translateY(-15%);
+            visibility: hidden;
             opacity: 0;
-
             @include transition;
 
-            display: none;
-
-            @include setResponsiveDesign(600px) {
-                width: 400px;
-            }
-
-            @include setResponsiveDesign(900px) {
+            @include setResponsiveDesign($breakpoint-tablet-landscape) {
                 width: auto;
+                max-width: none;
                 position: static;
                 background: none;
-                opacity: 1;
-
+                visibility: visible !important;
+                opacity: 1 !important;
                 @include flex;
-                gap: 40px;
+                column-gap: 40px;
                 padding: 0;
             }
 
@@ -58,59 +54,56 @@
                 content: "";
                 @include absolute(-40px, unset);
                 right: 0;
-                width: 0;
-                height: 0;
-                border: 20px solid $color-white;
-                border-top-color: transparent;
-                border-left-color: transparent;
+                width: 40px;
+                height: 40px;
+                clip-path: polygon(100% 0, 0 100%, 100% 100%);
+                background-color: $color-white;
 
-                @include setResponsiveDesign(900px) {
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
                     display: none;
                 }
             }
 
-            &.active {
-                display: block;
+            &.open {
+                transform: none;
+                visibility: visible;
+                opacity: 1;
             }
 
-            &_item {
-                list-style: none;
-                margin: 30px 0;
+            &-item {
+                margin-block: 30px;
                 font-size: 1.1em;
 
-                @include setResponsiveDesign(900px) {
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
                     margin: 0;
                 }
 
                 a {
                     color: $color-dark-grayish-blue;
-                    
-                    @include setResponsiveDesign(900px) {
+
+                    @include setResponsiveDesign($breakpoint-tablet-landscape) {
                         color: $color-white;
                     }
                 }
+            }
 
-                &_btn {
-                    font-family: $font-fraunces;
-                    color: $color-very-dark-desatured-blue !important;
-                    text-transform: uppercase;
-                    font-size: 0.8em;
+            &-button {
+                font-family: $font-fraunces;
+                color: $color-very-dark-desatured-blue !important;
+                text-transform: uppercase;
+                font-size: 0.8em;
+                display: inline-block;
+                padding: 20px 30px;
+                background-color: $color-yellow;
+                @include borderRadius(30px);
 
-                    display: inline-block;
-                    padding: 20px 30px;
+                @include setResponsiveDesign($breakpoint-tablet-landscape) {
+                    background-color: $color-white;
+                }
 
-                    background-color: $color-yellow;
-
-                    @include borderRadius(30px);
-
-                    @include setResponsiveDesign(900px) {
-                        background-color: $color-white;
-                    }
-
-                    &:hover {
-                        background-color: $color-blue-hover;
-                        color: $color-white !important;
-                    }
+                &:hover {
+                    background-color: $color-blue-hover;
+                    color: $color-white !important;
                 }
             }
         }

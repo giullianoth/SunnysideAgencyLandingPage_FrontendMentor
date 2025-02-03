@@ -1,62 +1,55 @@
-.main_footer {
-    background-color: $color-dark-moderate-cyan-footer-background;
-    text-align: center;
-    padding: 60px 20px;
-
-    &_title {
-        margin: auto;
-        margin-bottom: 30px;
-        width: 124px;
-    }
-
-    &_menu {
-        margin-bottom: 60px;
-
-        &_list {
-            @include flex;
-            gap: 40px;
-
-            &_item {
-                list-style: none;
-
-                a {
-                    color: $color-dark-moderate-cyan-footer;
-                }
-            }
-        }
-    }
-
-    &_social {
-        &_list {
-            @include flex;
-            gap: 30px;
-            font-size: 1.1em;
-
-            &_item {
-                list-style: none;
-
-                a {
-                    color: $color-dark-moderate-cyan-footer;
-                }
-            }
-        }
-    }
-
-    &_attribution {
-        font-size: 11px;
+@include theme() {
+    &footer {
+        @include containerFluid;
+        background-color: $color-dark-moderate-cyan-footer-background;
         text-align: center;
-        color: $color-dark-grayish-blue;
+        padding-inline: 20px;
+        padding-top: 60px;
 
-        @include absoluteFull(unset);
-        bottom: 0;
+        &__title {
+            margin-inline: auto;
+            margin-bottom: 30px;
+            max-width: 124px;
+        }
 
-        padding: 8px 0;
+        &__menu {
+            margin-bottom: 60px;
 
-        a {
-            color: $color-dark-desatured-cyan-text;
+            &-list {
+                @include flex(center, center, nowrap);
+                column-gap: 40px;
+            }
 
-            &:hover {
-                text-decoration: underline;
+            &-item {
+                a {
+                    color: $color-dark-moderate-cyan-footer;
+
+                    &:hover {
+                        color: $color-dark-desatured-cyan-text;
+                    }
+                }
+            }
+        }
+
+        &__social {
+            &-list {
+                @include flex(center, center, nowrap);
+                column-gap: 30px;
+            }
+        }
+
+        &__attribution {
+            padding-block: 60px 10px;
+            font-size: 11px;
+            text-align: center;
+            color: $color-dark-grayish-blue;
+
+            a {
+                color: $color-dark-desatured-cyan-text;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

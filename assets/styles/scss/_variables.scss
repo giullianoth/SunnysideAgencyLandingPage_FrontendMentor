@@ -1,8 +1,17 @@
-// **************
-// *   LAYOUT   *
-// **************
+// ****************************
+// *   LAYOUT & BREAKPOINTS   *
+// ****************************
 $layout-mobile: 375px;
 $layout-desktop: 1440px;
+
+$breakpoint-mobile: 480px;
+$breakpoint-mobile-landscape: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-landscape: 900px;
+$breakpoint-desktop-sd: 1024px;
+$breakpoint-desktop-hd1: 1366px;
+$breakpoint-desktop-hd2: $layout-desktop;
+$breakpoint-desktop-fhd: 1920px;
 
 // **************
 // *   COLORS   *
@@ -25,7 +34,7 @@ $color-grayish-blue: hsl(210, 4%, 67%);
 $color-white: hsl(0, 0%, 100%);
 
 // ******************
-// *   TIPOGRAPHY   *
+// *   TYPOGRAPHY   *
 // ******************
 // Body Copy:
 $font-size-default: 18px;
@@ -34,31 +43,10 @@ $font-size-default: 18px;
 $font-barlow: 'Barlow', sans-serif;
 $font-fraunces: 'Fraunces', serif;
 
-// Font presets:
-$font-path: "../../fonts";
-
-$font-barlow-presets: (
-    weights: (600),
-    family: $font-barlow,
-    files: ("Barlow-SemiBold.ttf"),
-    path: ("Barlow"),
-    format: ("truetype")
-);
-
-$font-fraunces-presets: (
-    weights: (700, 900),
-    family: $font-fraunces,
-    files: ("Fraunces_9pt-Bold.ttf", "Fraunces_9pt-Black.ttf"),
-    path: ("Fraunces/static/Fraunces_9pt"),
-    format: ("truetype")
-);
-
-$fonts: $font-barlow-presets, $font-fraunces-presets;
-
-// *********************
-// *   BROWSER CORES   *
-// *********************
-$browser-cores: (
+// ***************
+// *   BROWSER   *
+// ***************
+$browsers-default: (
     "moz",
     "webkit"
 );
@@ -66,4 +54,6 @@ $browser-cores: (
 // ******************
 // *   TRANSITION   *
 // ******************
-$transition-duration: 0.3s;
+$transition-property: all;
+$transition-duration: 300ms;
+$transition-timing-function: ease;
