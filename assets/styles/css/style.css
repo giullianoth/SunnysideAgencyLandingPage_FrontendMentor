@@ -567,6 +567,12 @@ picture {
   flex-wrap: nowrap;
   column-gap: 30px;
 }
+.ss-footer__social-item a {
+  opacity: 0.8;
+}
+.ss-footer__social-item a:hover {
+  opacity: 1;
+}
 .ss-footer__attribution {
   padding-block: 60px 10px;
   font-size: 11px;
